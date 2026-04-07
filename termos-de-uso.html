@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso — Instituto AMON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --rose:#A67B78;--rose-light:#C4A09D;--rose-dark:#7A5250;--rose-bg:#F5EFEE;--charcoal:#1C1C1C;--mid:#5A5A5A;--light:#9A9A9A;--line:#E8E2E1;--white:#FFFFFF;--off:#F9F7F6; }
+html { scroll-behavior: smooth; }
+body { background:var(--white);color:var(--charcoal);font-family:'Lato',sans-serif;font-weight:300;font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased; }
+nav { position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 4rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line); }
+.nav-logo { display:flex;align-items:center;gap:12px;text-decoration:none; }
+.nav-logo-text .n-inst { display:block;font-family:'Raleway',sans-serif;font-size:10px;font-weight:300;color:var(--rose);letter-spacing:0.22em;text-transform:uppercase; }
+.nav-logo-text .n-amon { display:block;font-family:'Raleway',sans-serif;font-size:20px;font-weight:600;color:var(--charcoal);letter-spacing:0.1em; }
+.nav-menu { display:flex;align-items:center;gap:2.5rem;list-style:none; }
+.nav-menu a { font-family:'Raleway',sans-serif;font-size:12px;font-weight:500;color:var(--mid);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color .2s; }
+.nav-menu a:hover { color:var(--rose); }
+.nav-btn { padding:9px 24px;background:var(--rose);color:var(--white)!important;border-radius:2px;font-size:11px!important;letter-spacing:0.14em!important;transition:background .2s!important; }
+.nav-btn:hover { background:var(--rose-dark)!important; }
+.page-hero { padding-top:68px;background:var(--off);border-bottom:1px solid var(--line); }
+.page-hero-inner { padding:5rem 4rem 4rem;max-width:820px; }
+.eyebrow { font-family:'Raleway',sans-serif;font-size:11px;font-weight:600;color:var(--rose);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:10px; }
+.eyebrow::before { content:'';width:24px;height:1px;background:var(--rose); }
+.page-title { font-family:'Raleway',sans-serif;font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;color:var(--charcoal);line-height:1.15;margin-bottom:1rem;letter-spacing:-0.01em; }
+.page-title strong { font-weight:700; }
+.page-meta { display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--line); }
+.page-meta-item { font-size:12px;font-weight:300;color:var(--light); }
+.page-meta-item strong { color:var(--mid);font-weight:500;display:block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px; }
+.doc-layout { display:grid;grid-template-columns:260px 1fr;max-width:1200px;margin:0 auto;gap:0;padding:5rem 4rem;align-items:start; }
+.doc-sidebar { position:sticky;top:90px; }
+.sidebar-nav { display:flex;flex-direction:column;gap:2px; }
+.sidebar-nav a { font-family:'Raleway',sans-serif;font-size:12px;font-weight:400;color:var(--light);text-decoration:none;letter-spacing:0.06em;padding:8px 12px;border-left:2px solid transparent;transition:all .2s;text-transform:uppercase; }
+.sidebar-nav a:hover { color:var(--rose);border-color:var(--rose); }
+.sidebar-nav a.active { color:var(--rose);border-color:var(--rose);font-weight:600; }
+.sidebar-label { font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;color:var(--light);letter-spacing:0.2em;text-transform:uppercase;padding:0 12px;margin-bottom:1rem; }
+.doc-content { padding-left:4rem;border-left:1px solid var(--line); }
+.doc-section { margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--line); }
+.doc-section:last-child { border-bottom:none; }
+.sec-num { font-family:'Raleway',sans-serif;font-size:11px;font-weight:600;color:var(--rose);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px; }
+.sec-num::before { content:'';width:20px;height:1px;background:var(--rose); }
+.doc-h2 { font-family:'Raleway',sans-serif;font-size:1.6rem;font-weight:600;color:var(--charcoal);margin-bottom:1.5rem;line-height:1.2; }
+.doc-h3 { font-family:'Raleway',sans-serif;font-size:1rem;font-weight:600;color:var(--charcoal);margin:2rem 0 0.8rem;letter-spacing:0.02em; }
+.doc-p { font-size:15px;font-weight:300;color:var(--mid);line-height:1.9;margin-bottom:1rem; }
+.doc-p strong { color:var(--charcoal);font-weight:500; }
+.doc-ul { margin:1rem 0;display:flex;flex-direction:column;gap:0.5rem; }
+.doc-ul li { font-size:14px;font-weight:300;color:var(--mid);line-height:1.75;list-style:none;display:flex;align-items:flex-start;gap:10px;padding-left:4px; }
+.doc-ul li::before { content:'→';color:var(--rose);font-size:12px;flex-shrink:0;margin-top:3px; }
+.doc-callout { background:var(--rose-bg);border-left:3px solid var(--rose);padding:1.5rem 2rem;margin:1.5rem 0; }
+.doc-callout p { font-size:14px;font-weight:300;color:var(--mid);line-height:1.8;font-style:italic; }
+.doc-callout p strong { color:var(--rose);font-weight:500; }
+.doc-callout-dark { background:var(--off);border-left:3px solid var(--charcoal);padding:1.5rem 2rem;margin:1.5rem 0; }
+.doc-callout-dark p { font-size:14px;font-weight:300;color:var(--mid);line-height:1.8; }
+.doc-callout-dark p strong { color:var(--charcoal);font-weight:600; }
+.doc-callout-alert { background:#FFF5F5;border-left:3px solid #C45050;padding:1.5rem 2rem;margin:1.5rem 0; }
+.doc-callout-alert p { font-size:14px;font-weight:400;color:#7A3030;line-height:1.8; }
+.doc-callout-alert p strong { font-weight:700; }
+footer { background:#111;padding:3.5rem 4rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;border-top:1px solid rgba(255,255,255,0.06); }
+.foot-brand { font-family:'Raleway',sans-serif;font-size:15px;font-weight:600;color:var(--white);letter-spacing:0.08em;margin-bottom:0.5rem; }
+.foot-sub { font-size:12px;font-weight:300;color:rgba(255,255,255,0.3);line-height:1.7; }
+.foot-seals { display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap; }
+.seal { font-size:10px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:1px; }
+.foot-right { display:flex;flex-direction:column;gap:0.6rem;align-items:flex-end; }
+.foot-contact { font-size:13px;font-weight:300;color:rgba(255,255,255,0.4); }
+.foot-contact a { color:var(--rose-light);text-decoration:none; }
+.foot-legal { display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem; }
+.foot-legal a { font-size:11px;color:rgba(255,255,255,0.25);text-decoration:none;font-family:'Raleway',sans-serif;letter-spacing:0.06em;transition:color .2s; }
+.foot-legal a:hover { color:var(--rose-light); }
+.foot-legal a.active-page { color:var(--rose-light);border-bottom:1px solid var(--rose-light); }
+@media(max-width:900px){.doc-layout{grid-template-columns:1fr;padding:3rem 1.5rem;}.doc-sidebar{display:none;}.doc-content{padding-left:0;border-left:none;}nav{padding:0 1.5rem;}.page-hero-inner{padding:4rem 1.5rem 3rem;}footer{grid-template-columns:1fr;padding:2.5rem 1.5rem;}.foot-right{align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-text">
+      <span class="n-inst">Instituto</span>
+      <span class="n-amon">AMON</span>
+    </div>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="politica-privacidade.html">Privacidade</a></li>
+    <li><a href="termos-de-uso.html" style="color:var(--rose)">Termos</a></li>
+    <li><a href="politica-cookies.html">Cookies</a></li>
+    <li><a href="https://app.institutoamon.com.br/portal" class="nav-btn">Portal do Paciente</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Documentos Legais</div>
+    <h1 class="page-title">Termos de <strong>Uso</strong></h1>
+    <p style="font-size:15px;font-weight:300;color:var(--mid);line-height:1.8;max-width:600px;margin-top:1rem;">Condições gerais de utilização do sistema clínico, Portal do Paciente e serviços do Instituto AMON Oncologia Integrada.</p>
+    <div class="page-meta">
+      <div class="page-meta-item"><strong>Entidade Responsável</strong>ALYSSA MIRANDA SERVIÇOS MÉDICOS LTDA</div>
+      <div class="page-meta-item"><strong>CNPJ</strong>49.319.051/0001-70</div>
+      <div class="page-meta-item"><strong>Vigência</strong>Abril de 2026 — Versão 1.0</div>
+      <div class="page-meta-item"><strong>Foro</strong>Vitória, Espírito Santo</div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-layout">
+  <aside class="doc-sidebar">
+    <div class="sidebar-label">Nesta Página</div>
+    <nav class="sidebar-nav">
+      <a href="#aceitacao">1. Aceitação</a>
+      <a href="#natureza">2. Natureza do Serviço</a>
+      <a href="#telemedicina">3. Telemedicina</a>
+      <a href="#portal">4. Portal do Paciente</a>
+      <a href="#propriedade">5. Propriedade Intelectual</a>
+      <a href="#obrigacoes">6. Obrigações do Usuário</a>
+      <a href="#responsabilidade">7. Responsabilidade</a>
+      <a href="#rescisao">8. Rescisão</a>
+      <a href="#lei">9. Lei Aplicável e Foro</a>
+      <a href="#disposicoes">10. Disposições Finais</a>
+    </nav>
+  </aside>
+
+  <main class="doc-content">
+
+    <div class="doc-section" id="aceitacao">
+      <div class="sec-num">01</div>
+      <h2 class="doc-h2">Aceitação dos Termos</h2>
+      <p class="doc-p">Ao acessar, cadastrar-se ou utilizar qualquer serviço do Instituto AMON Oncologia Integrada — incluindo o sistema clínico (<strong>app.institutoamon.com.br</strong>), o Portal do Paciente, o site institucional (<strong>www.institutoamon.com.br</strong>) e a comunicação via WhatsApp —, o usuário declara ter lido, compreendido e concordado integralmente com estes Termos de Uso.</p>
+      <p class="doc-p">Caso não concorde com qualquer disposição destes Termos, o usuário deve cessar imediatamente o uso dos serviços e comunicar o Instituto AMON para o encerramento de seu cadastro.</p>
+      <div class="doc-callout">
+        <p>O uso dos serviços do Instituto AMON pressupõe, necessariamente, a leitura e aceitação da <a href="politica-privacidade.html" style="color:var(--rose);text-decoration:none"><strong>Política de Privacidade</strong></a> e da <a href="politica-cookies.html" style="color:var(--rose);text-decoration:none"><strong>Política de Cookies</strong></a>. Os três documentos formam um conjunto normativo integrado.</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="natureza">
+      <div class="sec-num">02</div>
+      <h2 class="doc-h2">Natureza do Serviço</h2>
+
+      <h3 class="doc-h3">2.1 O que é o Instituto AMON</h3>
+      <p class="doc-p">O Instituto AMON é um programa de acompanhamento oncológico contínuo e multidisciplinar que oferece:</p>
+      <ul class="doc-ul">
+        <li>Monitoramento clínico contínuo por oncologistas e equipe multidisciplinar</li>
+        <li>Avaliação nutricional oncológica com índices proprietários (INOC — 51 marcadores laboratoriais)</li>
+        <li>Acompanhamento de cuidados paliativos estruturado com escalas validadas internacionalmente</li>
+        <li>Teleconsultas médicas por plataforma digital segura (Google Meet)</li>
+        <li>Portal exclusivo para o paciente com upload de documentos e acesso a agendamentos</li>
+        <li>Relatórios de impacto para municípios contratantes com 22 indicadores em 5 eixos</li>
+      </ul>
+
+      <h3 class="doc-h3">2.2 O que o Instituto AMON NÃO é</h3>
+      <div class="doc-callout-alert">
+        <p><strong>⚠ Em situações de risco de vida, dor severa ou piora clínica aguda:</strong> ligue imediatamente para o <strong>SAMU (192)</strong> ou vá ao pronto-socorro mais próximo. O Instituto AMON não é serviço de emergência ou urgência.</p>
+      </div>
+      <ul class="doc-ul">
+        <li>Não substitui o oncologista de referência, o hospital ou os serviços de quimioterapia e radioterapia</li>
+        <li>Não realiza tratamento oncológico — o papel da AMON é monitoramento, coordenação e acompanhamento contínuo</li>
+        <li>Não fornece laudos médicos para fins de seguros, perícia ou concessão de benefícios previdenciários sem contrato específico</li>
+        <li>Não realiza atendimento de emergência — a equipe responde dentro dos prazos definidos pelo nível IACO do paciente</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="telemedicina">
+      <div class="sec-num">03</div>
+      <h2 class="doc-h2">Telemedicina — Limites e Responsabilidades</h2>
+      <p class="doc-p">As teleconsultas do Instituto AMON são realizadas em conformidade com a <strong>Resolução CFM nº 2.314/2022</strong>, que regulamenta a prática da telemedicina no Brasil. As consultas ocorrem exclusivamente por plataforma segura (Google Meet com link enviado via WhatsApp ou email) e são conduzidas por médico habilitado com CRM ativo.</p>
+      <p class="doc-p">Ao utilizar o serviço de teleconsulta, o usuário reconhece que:</p>
+      <ul class="doc-ul">
+        <li>A teleconsulta pode ter limitações em relação ao exame físico presencial — o médico pode solicitar atendimento presencial quando necessário</li>
+        <li>A qualidade da consulta pode ser afetada por fatores técnicos alheios ao controle do Instituto AMON (conexão de internet, qualidade do dispositivo)</li>
+        <li>O médico responsável pela teleconsulta emite prescrições digitais conforme a legislação vigente (Lei nº 13.787/2018 e CFM nº 2.314/2022)</li>
+        <li>As informações clínicas fornecidas pelo paciente durante a teleconsulta são de sua responsabilidade — a omissão de dados relevantes pode comprometer a qualidade do atendimento</li>
+        <li>O Instituto AMON realiza o registro de todas as teleconsultas no prontuário eletrônico do paciente</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="portal">
+      <div class="sec-num">04</div>
+      <h2 class="doc-h2">Portal do Paciente — Acesso e Responsabilidades</h2>
+
+      <h3 class="doc-h3">4.1 Credenciais de Acesso</h3>
+      <p class="doc-p">O acesso ao Portal do Paciente é realizado por CPF e senha pessoal e intransferível. O usuário é responsável por:</p>
+      <ul class="doc-ul">
+        <li>Manter a confidencialidade de sua senha</li>
+        <li>Notificar imediatamente o Instituto AMON caso suspeite de acesso não autorizado: <strong>(27) 99970-3538</strong></li>
+        <li>Não compartilhar suas credenciais com terceiros, exceto em situações de cuidado por responsável legal devidamente cadastrado</li>
+      </ul>
+
+      <h3 class="doc-h3">4.2 Envio de Documentos e Imagens</h3>
+      <p class="doc-p">Ao enviar documentos, imagens ou arquivos pelo Portal do Paciente, o usuário declara que:</p>
+      <ul class="doc-ul">
+        <li>Os arquivos enviados são de sua autoria ou de uso autorizado</li>
+        <li>As imagens clínicas enviadas são autênticas e não foram manipuladas</li>
+        <li>Os documentos médicos enviados são originais ou cópias fidedignas de exames e laudos</li>
+        <li>Autoriza o Instituto AMON a utilizá-los exclusivamente para fins clínicos de acompanhamento oncológico</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="propriedade">
+      <div class="sec-num">05</div>
+      <h2 class="doc-h2">Propriedade Intelectual</h2>
+
+      <h3 class="doc-h3">5.1 Metodologia e Índices Proprietários</h3>
+      <p class="doc-p">Os índices clínicos <strong>IACO, INOC, IACO+, IACO++, NCI e NNC</strong>, bem como o Protocolo de Continuidade Oncológica Integrada AMON, as fórmulas de cálculo, os algoritmos de estratificação e os critérios de classificação são <strong>propriedade exclusiva do Instituto AMON Oncologia Integrada</strong>.</p>
+      <p class="doc-p">É expressamente vedado:</p>
+      <ul class="doc-ul">
+        <li>Reproduzir, adaptar, publicar ou distribuir os índices ou a metodologia sem autorização escrita do Instituto AMON</li>
+        <li>Utilizar a denominação IACO, INOC, IACO+, IACO++ ou qualquer variante como marca, produto ou metodologia de terceiros</li>
+        <li>Reverter, descompilar ou extrair os algoritmos do sistema por meios técnicos</li>
+        <li>Utilizar os dados do sistema para treinar modelos de inteligência artificial de terceiros</li>
+      </ul>
+
+      <h3 class="doc-h3">5.2 Sistema Digital</h3>
+      <p class="doc-p">O sistema digital AMON (código-fonte, interface, design, estrutura de banco de dados e toda a arquitetura tecnológica) é de propriedade exclusiva do Instituto AMON. O acesso ao sistema não confere ao usuário qualquer direito de propriedade intelectual sobre o software.</p>
+
+      <h3 class="doc-h3">5.3 Dados do Prontuário</h3>
+      <p class="doc-p">Os dados clínicos do paciente são de titularidade do próprio paciente, nos termos da LGPD. O Instituto AMON os trata na qualidade de controlador, com base nas bases legais descritas na <a href="politica-privacidade.html" style="color:var(--rose);text-decoration:none">Política de Privacidade</a>.</p>
+      <div class="doc-callout-dark">
+        <p>O prontuário eletrônico <strong>não pode ser transferido para terceiros sem consentimento expresso do titular</strong>, exceto nas hipóteses legalmente previstas (judiciais, sanitárias, notificações compulsórias).</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="obrigacoes">
+      <div class="sec-num">06</div>
+      <h2 class="doc-h2">Obrigações do Usuário</h2>
+      <p class="doc-p">Ao utilizar os serviços do Instituto AMON, o usuário compromete-se a:</p>
+      <ul class="doc-ul">
+        <li>Fornecer informações verdadeiras, completas e atualizadas no cadastro e nas avaliações</li>
+        <li>Comunicar imediatamente qualquer alteração relevante em seu estado de saúde que não tenha sido captada nos questionários periódicos</li>
+        <li>Participar das teleconsultas agendadas ou comunicar o cancelamento com antecedência mínima de 2 horas</li>
+        <li>Não utilizar o sistema para finalidades diversas do acompanhamento oncológico</li>
+        <li>Respeitar os horários de atendimento e os prazos de resposta da equipe</li>
+        <li>Não tentar acessar dados de outros pacientes ou funcionalidades não autorizadas ao seu perfil</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="responsabilidade">
+      <div class="sec-num">07</div>
+      <h2 class="doc-h2">Responsabilidade e Limitações</h2>
+      <p class="doc-p">O Instituto AMON emprega todos os recursos técnicos e clínicos disponíveis para garantir a qualidade do monitoramento oncológico contínuo. Contudo, o Instituto AMON não se responsabiliza por:</p>
+      <ul class="doc-ul">
+        <li>Resultados clínicos negativos decorrentes de informações incorretas ou omitidas pelo paciente ou cuidador</li>
+        <li>Intercorrências clínicas ocorridas fora dos horários de monitoramento ou teleconsulta agendada</li>
+        <li>Falhas técnicas de terceiros (internet, Google Meet, WhatsApp, Supabase) que interrompam temporariamente o acesso ao sistema</li>
+        <li>Interpretações equivocadas de resultados dos índices por profissionais externos não vinculados ao programa</li>
+      </ul>
+      <div class="doc-callout">
+        <p>O monitoramento do Instituto AMON é <strong>complementar ao cuidado oncológico convencional</strong> e não substitui as consultas com o oncologista de referência, os exames de imagem ou os protocolos de tratamento definidos pela equipe hospitalar.</p>
+      </div>
+    </div>
+
+    <div class="doc-section" id="rescisao">
+      <div class="sec-num">08</div>
+      <h2 class="doc-h2">Rescisão e Descadastramento</h2>
+      <p class="doc-p">O usuário pode solicitar o encerramento de seu cadastro a qualquer momento, enviando solicitação para <strong>privacidade@institutoamon.com.br</strong>. O encerramento implica:</p>
+      <ul class="doc-ul">
+        <li>Desativação imediata do acesso ao Portal do Paciente</li>
+        <li>Manutenção do prontuário pelo prazo legal de 20 anos (Resolução CFM nº 1.821/2007)</li>
+        <li>Não rescisão automática de eventual contrato vigente — contratos municipais e particulares têm cláusulas próprias de rescisão</li>
+      </ul>
+      <p class="doc-p">O Instituto AMON pode suspender o acesso do usuário em caso de uso indevido do sistema, fornecimento de informações falsas ou violação destes Termos.</p>
+    </div>
+
+    <div class="doc-section" id="lei">
+      <div class="sec-num">09</div>
+      <h2 class="doc-h2">Lei Aplicável e Foro</h2>
+      <p class="doc-p">Estes Termos de Uso são regidos pela legislação brasileira, em especial a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>, o <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong> e as resoluções do Conselho Federal de Medicina aplicáveis.</p>
+      <p class="doc-p">Fica eleito o <strong>foro da Comarca de Vitória, Espírito Santo</strong>, para dirimir eventuais controvérsias decorrentes destes Termos, ressalvada a competência de juizados especiais para demandas de consumo até 40 salários mínimos.</p>
+    </div>
+
+    <div class="doc-section" id="disposicoes">
+      <div class="sec-num">10</div>
+      <h2 class="doc-h2">Disposições Finais</h2>
+      <p class="doc-p">Estes Termos de Uso foram redigidos em linguagem clara e acessível, em conformidade com o art. 9º da LGPD. Em caso de dúvidas sobre qualquer disposição, o usuário pode entrar em contato antes de aceitar os termos.</p>
+      <p class="doc-p">A tolerância do Instituto AMON com eventual descumprimento destes Termos não implica renúncia ao direito de exigi-los no futuro.</p>
+      <div class="doc-callout">
+        <p>Contato: <strong>privacidade@institutoamon.com.br</strong> · WhatsApp: <strong>(27) 99970-3538</strong> · <a href="www.institutoamon.com.br" style="color:var(--rose);text-decoration:none">www.institutoamon.com.br</a></p>
+      </div>
+      <p class="doc-p" style="font-size:13px;color:var(--light);">Vigência: Abril de 2026 — Versão 1.0</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div>
+    <div class="foot-brand">Instituto AMON</div>
+    <div class="foot-sub">ALYSSA MIRANDA SERVIÇOS MÉDICOS LTDA · CNPJ 49.319.051/0001-70<br>Vitória, Espírito Santo · Dra. Alyssa Miranda · CRM/ES 13212</div>
+    <div class="foot-seals">
+      <span class="seal">LGPD Conforme</span>
+      <span class="seal">CFM</span>
+      <span class="seal">Metodologia Registrada</span>
+    </div>
+    <div class="foot-legal" style="margin-top:1rem;">
+      <a href="politica-privacidade.html">Política de Privacidade</a>
+      <a href="termos-de-uso.html" class="active-page">Termos de Uso</a>
+      <a href="politica-cookies.html">Política de Cookies</a>
+    </div>
+  </div>
+  <div class="foot-right">
+    <span class="foot-contact">✉ <a href="mailto:contato@institutoamon.com.br">contato@institutoamon.com.br</a></span>
+    <span class="foot-contact">📞 <a href="tel:+5527999703538">(27) 99970-3538</a></span>
+    <span class="foot-contact" style="font-size:11px;color:rgba(255,255,255,0.18);margin-top:0.5rem;">© 2026 Instituto AMON. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const links = document.querySelectorAll('.sidebar-nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id'); });
+  links.forEach(l => { l.classList.remove('active'); if (l.getAttribute('href') === '#' + current) l.classList.add('active'); });
+});
+</script>
+</body>
+</html>
