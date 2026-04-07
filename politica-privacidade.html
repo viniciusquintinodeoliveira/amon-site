@@ -29,14 +29,14 @@ nav { position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;a
 .page-meta { display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--line); }
 .page-meta-item { font-size:12px;font-weight:300;color:var(--light); }
 .page-meta-item strong { color:var(--mid);font-weight:500;display:block;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px; }
-.doc-layout { display:grid;grid-template-columns:260px 1fr;max-width:1200px;margin:0 auto;gap:0;padding:5rem 4rem;align-items:start; }
-.doc-sidebar { position:sticky;top:90px; }
+.doc-layout { max-width:820px;margin:0 auto;padding:5rem 4rem; }
+.doc-sidebar { display:none; }
 .sidebar-nav { display:flex;flex-direction:column;gap:2px; }
 .sidebar-nav a { font-family:'Raleway',sans-serif;font-size:12px;font-weight:400;color:var(--light);text-decoration:none;letter-spacing:0.06em;padding:8px 12px;border-left:2px solid transparent;transition:all .2s;text-transform:uppercase; }
 .sidebar-nav a:hover { color:var(--rose);border-color:var(--rose); }
 .sidebar-nav a.active { color:var(--rose);border-color:var(--rose);font-weight:600; }
 .sidebar-label { font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;color:var(--light);letter-spacing:0.2em;text-transform:uppercase;padding:0 12px;margin-bottom:1rem; }
-.doc-content { padding-left:4rem;border-left:1px solid var(--line); }
+.doc-content { padding-left:0; }
 .doc-section { margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid var(--line); }
 .doc-section:last-child { border-bottom:none; }
 .sec-num { font-family:'Raleway',sans-serif;font-size:11px;font-weight:600;color:var(--rose);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px; }
@@ -70,7 +70,7 @@ footer { background:#111;padding:3.5rem 4rem;display:grid;grid-template-columns:
 .foot-legal a { font-size:11px;color:rgba(255,255,255,0.25);text-decoration:none;font-family:'Raleway',sans-serif;letter-spacing:0.06em;transition:color .2s; }
 .foot-legal a:hover { color:var(--rose-light); }
 .foot-legal a.active-page { color:var(--rose-light);border-bottom:1px solid var(--rose-light); }
-@media(max-width:900px){.doc-layout{grid-template-columns:1fr;padding:3rem 1.5rem;}.doc-sidebar{display:none;}.doc-content{padding-left:0;border-left:none;}nav{padding:0 1.5rem;}.page-hero-inner{padding:4rem 1.5rem 3rem;}footer{grid-template-columns:1fr;padding:2.5rem 1.5rem;}.foot-right{align-items:flex-start;}}
+@media(max-width:900px){.doc-layout{padding:3rem 1.5rem;}nav{padding:0 1.5rem;}.page-hero-inner{padding:4rem 1.5rem 3rem;}footer{grid-template-columns:1fr;padding:2.5rem 1.5rem;}.foot-right{align-items:flex-start;}}
 </style>
 </head>
 <body>
@@ -320,7 +320,7 @@ footer { background:#111;padding:3.5rem 4rem;display:grid;grid-template-columns:
       <div class="doc-callout">
         <p><strong>Exceção legal:</strong> A eliminação de dados de prontuário médico fica sujeita ao prazo mínimo de guarda de 20 anos previsto pela regulamentação do CFM, prevalecendo sobre eventual pedido de eliminação pelo titular.</p>
       </div>
-      <p class="doc-p">Para exercer qualquer direito relacionado aos seus dados pessoais, entre em contato com nosso Encarregado de Dados (DPO) pelo e-mail: <a href="mailto:contato@institutoamon.com.br" style="color:var(--rose);text-decoration:none;">contato@institutoamon.com.br</a></p>
+      <p class="doc-p">Para exercer qualquer direito relacionado aos seus dados pessoais, entre em contato com nosso Encarregado de Dados (DPO) pelo e-mail: <a href="/cdn-cgi/l/email-protection#32515d5c4653465d725b5c41465b4647465d535f5d5c1c515d5f1c5040" style="color:var(--rose);text-decoration:none;"><span class="__cf_email__" data-cfemail="4724282933263328072e2934332e33323328262a28296924282a692535">[email&#160;protected]</span></a></p>
     </div>
 
     <div class="doc-section" id="transferencia">
@@ -348,7 +348,7 @@ footer { background:#111;padding:3.5rem 4rem;display:grid;grid-template-columns:
       <div class="sec-num">13</div>
       <h2 class="doc-h2">Contato e Encarregado de Dados (DPO)</h2>
       <ul class="doc-ul">
-        <li>E-mail: <a href="mailto:contato@institutoamon.com.br" style="color:var(--rose);text-decoration:none;">contato@institutoamon.com.br</a></li>
+        <li>E-mail: <a href="/cdn-cgi/l/email-protection#5f3c30312b3e2b301f36312c2b362b2a2b303e323031713c3032713d2d" style="color:var(--rose);text-decoration:none;"><span class="__cf_email__" data-cfemail="99faf6f7edf8edf6d9f0f7eaedf0edecedf6f8f4f6f7b7faf6f4b7fbeb">[email&#160;protected]</span></a></li>
         <li>WhatsApp: (27) 99970-3538</li>
         <li>Endereço: Vitória, Espírito Santo, Brasil</li>
         <li>Autoridade de Supervisão: Autoridade Nacional de Proteção de Dados (ANPD) — <a href="https://www.gov.br/anpd" target="_blank" style="color:var(--rose);text-decoration:none;">www.gov.br/anpd</a></li>
@@ -374,11 +374,4 @@ footer { background:#111;padding:3.5rem 4rem;display:grid;grid-template-columns:
     </div>
   </div>
   <div class="foot-right">
-    <span class="foot-contact">✉ <a href="mailto:contato@institutoamon.com.br">contato@institutoamon.com.br</a></span>
-    <span class="foot-contact">📞 <a href="tel:+5527999703538">(27) 99970-3538</a></span>
-    <span class="foot-contact" style="font-size:11px;color:rgba(255,255,255,0.18);margin-top:0.5rem;">© 2026 Instituto AMON. Todos os direitos reservados.</span>
-  </div>
-</footer>
-
-</body>
-</html>
+    <span class="foot-contact">✉ <a href="/cdn-cgi/l/email-protection#10737f7e6471647f50797e636479646564
