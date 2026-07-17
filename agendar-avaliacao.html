@@ -237,6 +237,53 @@ footer h5{font-family:'Raleway',sans-serif;color:#fff;font-size:10.5px;letter-sp
 footer a{color:#C9BEBA;text-decoration:none}
 footer a:hover{color:#fff}
 footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opacity:.8;font-size:11px}
+
+/* ─── CONSENTIMENTO DE COOKIES (LGPD) ─── */
+#cookie-overlay{position:fixed;inset:0;z-index:9000;background:rgba(28,28,28,.45);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);display:flex;align-items:flex-end;justify-content:center;padding:0 0 2rem;opacity:0;pointer-events:none;transition:opacity .35s ease}
+#cookie-overlay.visible{opacity:1;pointer-events:all}
+#cookie-banner{width:min(780px,calc(100vw - 2rem));background:#fff;border:1px solid var(--line);box-shadow:0 24px 64px rgba(28,28,28,.18);overflow:hidden;transform:translateY(20px);transition:transform .35s ease;max-height:calc(100vh - 4rem);overflow-y:auto}
+#cookie-overlay.visible #cookie-banner{transform:translateY(0)}
+.ck-header{display:flex;align-items:center;gap:12px;padding:1.6rem 2rem 0}
+.ck-icon{width:36px;height:36px;flex-shrink:0;background:var(--rose-mist);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ck-title{font-family:'Raleway',sans-serif;font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.06em;text-transform:uppercase}
+.ck-body{padding:1rem 2rem 1.4rem}
+.ck-text{font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8}
+.ck-text a{color:var(--rose);text-decoration:none}
+.ck-text a:hover{text-decoration:underline}
+.ck-cats{display:none;flex-direction:column;margin:1rem 0 .5rem;border:1px solid var(--line)}
+.ck-cats.open{display:flex}
+.ck-cat{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
+.ck-cat:last-child{border-bottom:none}
+.ck-cat-info{flex:1}
+.ck-cat-name{font-family:'Raleway',sans-serif;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.ck-cat-desc{font-size:12px;font-weight:300;color:var(--ink-soft);line-height:1.6;opacity:.85}
+.ck-toggle{flex-shrink:0;position:relative;width:38px;height:22px;margin-top:2px}
+.ck-toggle input{opacity:0;width:0;height:0;position:absolute}
+.ck-toggle-track{position:absolute;inset:0;background:var(--line);border-radius:11px;cursor:pointer;transition:background .2s}
+.ck-toggle input:checked~.ck-toggle-track{background:var(--rose)}
+.ck-toggle input:disabled~.ck-toggle-track{background:var(--rose);opacity:.55;cursor:not-allowed}
+.ck-toggle input:focus-visible~.ck-toggle-track{outline:2px solid var(--rose);outline-offset:2px}
+.ck-toggle-track::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.ck-toggle input:checked~.ck-toggle-track::after{transform:translateX(16px)}
+.ck-actions{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;padding:1rem 2rem 1.6rem;border-top:1px solid var(--line);background:var(--beige-soft)}
+.ck-btn-primary{padding:12px 24px;background:var(--rose-btn);color:#fff;font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.ck-btn-primary:hover{background:var(--rose-dark)}
+.ck-btn-secondary{padding:12px 24px;background:transparent;color:var(--ink-soft);font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);cursor:pointer;transition:all .2s}
+.ck-btn-secondary:hover{border-color:var(--rose);color:var(--rose-dark)}
+.ck-btn-text{margin-left:auto;background:none;border:none;cursor:pointer;font-family:'Raleway',sans-serif;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.ck-btn-text:hover{color:var(--rose-dark)}
+.ck-btn-primary:focus-visible,.ck-btn-secondary:focus-visible,.ck-btn-text:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+.foot-pref-btn{background:none;border:none;cursor:pointer;font-size:11px;color:#C9BEBA;font-family:'Raleway',sans-serif;letter-spacing:.06em;padding:0;transition:color .2s;text-decoration:underline;text-underline-offset:3px}
+.foot-pref-btn:hover{color:#fff}
+@media(max-width:600px){
+  #cookie-overlay{padding:0}
+  #cookie-banner{width:100vw;max-height:88vh}
+  .ck-header{padding:1.3rem 1.3rem 0}
+  .ck-body{padding:.9rem 1.3rem 1.2rem}
+  .ck-actions{padding:1rem 1.3rem 1.3rem;flex-direction:column;align-items:stretch}
+  .ck-actions button{width:100%}
+  .ck-btn-text{margin-left:0;margin-top:.2rem}
+}
 </style>
 </head>
 <body>
@@ -587,7 +634,7 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
     </div>
     <div class="legal">
       A Avaliação de Risco e Cuidado é um serviço médico de avaliação clínica prestado por telemedicina e <strong>não configura plano privado de assistência à saúde</strong> nos termos da Lei nº 9.656/1998. Não substitui o tratamento oncológico prescrito pelo médico assistente. Resultados clínicos variam individualmente e nenhum resultado específico é prometido ou garantido. Publicidade em conformidade com a Resolução CFM nº 2.336/2023. Dados pessoais e de saúde tratados conforme a LGPD (Lei nº 13.709/2018).<br><br>
-      © 2026 Instituto AMON. Todos os direitos reservados.
+      © 2026 Instituto AMON. Todos os direitos reservados. · <button class="foot-pref-btn" onclick="openCookiePrefs()">Privacidade e Cookies</button>
     </div>
   </div>
 </footer>
@@ -638,5 +685,105 @@ val.addEventListener('input', e => {
 });
 </script>
 
+
+<!-- ─── Consentimento de cookies (LGPD) ─── -->
+<div id="cookie-overlay" role="dialog" aria-modal="true" aria-labelledby="ck-title">
+  <div id="cookie-banner">
+    <div class="ck-header">
+      <div class="ck-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="7.5" stroke="#A67B78" stroke-width="1.4"/>
+          <circle cx="9" cy="9" r="2.5" fill="#A67B78"/>
+          <circle cx="5" cy="5.5" r="1.2" fill="#A67B78" opacity=".5"/>
+          <circle cx="13" cy="6" r="1" fill="#A67B78" opacity=".5"/>
+          <circle cx="5.5" cy="12.5" r="1" fill="#A67B78" opacity=".4"/>
+          <circle cx="12.5" cy="12" r="1.4" fill="#A67B78" opacity=".45"/>
+        </svg>
+      </div>
+      <span class="ck-title" id="ck-title">Privacidade e Cookies</span>
+    </div>
+    <div class="ck-body">
+      <p class="ck-text">Este site utiliza cookies para garantir seu funcionamento adequado, melhorar sua experiência de navegação e analisar o uso da plataforma. Você pode aceitar todos os cookies, aceitar apenas os essenciais ou personalizar suas preferências. Saiba mais na <a href="/politica-cookies.html">Política de Cookies</a>, na <a href="/politica-privacidade.html">Política de Privacidade</a> e nos <a href="/termos-de-uso.html">Termos de Uso</a>.</p>
+      <div class="ck-cats" id="ck-cats">
+        <div class="ck-cat">
+          <div class="ck-cat-info"><div class="ck-cat-name">Cookies Essenciais</div><div class="ck-cat-desc">Necessários para o funcionamento do site. Não podem ser desativados.</div></div>
+          <label class="ck-toggle"><input type="checkbox" checked disabled aria-label="Cookies essenciais (sempre ativos)"><span class="ck-toggle-track"></span></label>
+        </div>
+        <div class="ck-cat">
+          <div class="ck-cat-info"><div class="ck-cat-name">Cookies Funcionais</div><div class="ck-cat-desc">Permitem funcionalidades aprimoradas como preferências de navegação.</div></div>
+          <label class="ck-toggle"><input type="checkbox" id="ck-func" checked aria-label="Cookies funcionais"><span class="ck-toggle-track"></span></label>
+        </div>
+        <div class="ck-cat">
+          <div class="ck-cat-info"><div class="ck-cat-name">Cookies Analíticos</div><div class="ck-cat-desc">Nos ajudam a entender como os visitantes interagem com o site de forma anônima.</div></div>
+          <label class="ck-toggle"><input type="checkbox" id="ck-analytics" checked aria-label="Cookies analíticos"><span class="ck-toggle-track"></span></label>
+        </div>
+        <div class="ck-cat">
+          <div class="ck-cat-info"><div class="ck-cat-name">Cookies de Marketing</div><div class="ck-cat-desc">Utilizados para exibir conteúdo relevante com base no seu perfil de navegação.</div></div>
+          <label class="ck-toggle"><input type="checkbox" id="ck-marketing" aria-label="Cookies de marketing"><span class="ck-toggle-track"></span></label>
+        </div>
+      </div>
+    </div>
+    <div class="ck-actions">
+      <button class="ck-btn-primary" onclick="acceptAll()">Aceitar Todos</button>
+      <button class="ck-btn-secondary" onclick="acceptEssential()">Somente Essenciais</button>
+      <button class="ck-btn-text" id="ck-customize-btn" onclick="toggleCustomize()">Personalizar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Consentimento de cookies — LGPD (Lei 13.709/2018).
+   A escolha fica no navegador do visitante; nada é enviado a servidor.
+   O try/catch cobre navegação privada, onde o localStorage é bloqueado. */
+(function () {
+  var K = 'amon_cookie_consent', mem = null;
+  var ov = document.getElementById('cookie-overlay');
+  if (!ov) return;
+
+  function ler()  { try { return localStorage.getItem(K); } catch (e) { return mem; } }
+  function grava(v){ try { localStorage.setItem(K, v); } catch (e) { mem = v; } }
+  function show() { ov.classList.add('visible'); }
+  function hide() { ov.classList.remove('visible'); }
+  function save(p){ grava(JSON.stringify({ ts: Date.now(), prefs: p })); hide(); }
+
+  window.acceptAll       = function () { save({ essential:true, functional:true,  analytics:true,  marketing:true  }); };
+  window.acceptEssential = function () { save({ essential:true, functional:false, analytics:false, marketing:false }); };
+  window.saveCustom      = function () {
+    save({
+      essential:  true,
+      functional: document.getElementById('ck-func').checked,
+      analytics:  document.getElementById('ck-analytics').checked,
+      marketing:  document.getElementById('ck-marketing').checked,
+    });
+  };
+  window.toggleCustomize = function () {
+    var c = document.getElementById('ck-cats'),
+        b = document.getElementById('ck-customize-btn'),
+        aberto = c.classList.toggle('open');
+    b.textContent = aberto ? 'Salvar Preferências' : 'Personalizar';
+    b.onclick = aberto ? saveCustom : toggleCustomize;
+  };
+  window.openCookiePrefs = function () {
+    var s = ler();
+    if (s) {
+      try {
+        var p = JSON.parse(s).prefs;
+        document.getElementById('ck-func').checked = !!p.functional;
+        document.getElementById('ck-analytics').checked = !!p.analytics;
+        document.getElementById('ck-marketing').checked = !!p.marketing;
+      } catch (e) {}
+    }
+    var c = document.getElementById('ck-cats'), b = document.getElementById('ck-customize-btn');
+    c.classList.add('open');
+    b.textContent = 'Salvar Preferências';
+    b.onclick = saveCustom;
+    show();
+  };
+
+  if (!ler()) setTimeout(show, 800);
+  ov.addEventListener('click', function (e) { if (e.target === this) hide(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+})();
+</script>
 </body>
 </html>
