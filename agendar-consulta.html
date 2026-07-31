@@ -402,95 +402,19 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
   <div class="wrap" style="padding-top:104px;padding-bottom:104px">
     <div class="form-card">
       <h3>Agende sua consulta</h3>
-      <p class="hint">Preencha seus dados para concluir. Após a confirmação do pagamento, você será encaminhado ao agendamento online, para escolher o melhor horário direto com um dos médicos da nossa equipe.</p>
+      <p class="hint">O pagamento e o agendamento acontecem no Portal do Paciente, em ambiente seguro. Você cria o seu acesso — ou entra com o CPF já cadastrado —, o pagamento é gerado no seu nome e a liberação é automática assim que a confirmação chega.</p>
 
-      <!-- ATENÇÃO: integração de pagamento pendente. Os campos de cartão abaixo são apenas
-           a interface visual; em produção devem ser substituídos pelo componente tokenizado
-           do gateway (ex.: Asaas), para que nenhum dado de cartão trafegue neste servidor. -->
-      <form onsubmit="return false">
-        <div class="fset">
-          <div class="leg">01 · Seus dados</div>
-          <div class="frow"><div><label for="nome">Nome completo</label><input id="nome" placeholder="Como no seu documento"></div></div>
-          <div class="frow two">
-            <div><label for="email">E-mail</label><input id="email" type="email" placeholder="seu@email.com"></div>
-            <div><label for="fone">WhatsApp</label><input id="fone" placeholder="(00) 00000-0000"></div>
-          </div>
-          <div class="frow two">
-            <div><label for="cpf">CPF</label><input id="cpf" placeholder="000.000.000-00"></div>
-            <div><label for="nasc">Data de nascimento</label><input id="nasc" placeholder="dd/mm/aaaa"></div>
-          </div>
-        </div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin:22px 0 4px;flex-wrap:wrap">
+        <span style="font-size:32px;color:var(--ink)">R$ 397</span>
+        <span class="hint" style="margin:0">pagamento único</span>
+      </div>
 
-        <div class="fset">
-          <div class="leg">02 · Forma de pagamento</div>
+      <a class="btn btn-fill" style="width:100%;text-align:center;margin-top:18px;box-sizing:border-box" href="https://app.institutoamon.com.br/portal/planos?produto=avulsa">Pagamento e agendamento</a>
+      <a class="btn btn-line" style="width:100%;text-align:center;margin-top:10px;box-sizing:border-box" href="https://wa.me/5527999703538?text=Ol%C3%A1%2C%20quero%20agendar%20uma%20consulta%20com%20a%20equipe%20AMON." target="_blank" rel="noreferrer">Falar com a equipe</a>
 
-          <div class="pay-methods">
-            <!-- CARTÃO -->
-            <div class="pay-opt open" id="opt-card">
-              <button type="button" class="pay-head" aria-expanded="true" onclick="pick('card')">
-                <span class="radio"></span>
-                <span class="pay-title">Cartão de crédito</span>
-                <span class="pay-tag">Aprovação imediata</span>
-              </button>
-              <div class="pay-body">
-                <div class="card-vis">
-                  <svg class="gh" viewBox="0 0 312.75 306.50" aria-hidden="true"><use href="#amon-mark"/></svg>
-                  <div class="top">
-                    <div class="chip"></div>
-                    <div style="text-align:right">
-                      <div class="lbl">Instituto</div>
-                      <div style="font-family:'Raleway',sans-serif;font-size:15px;letter-spacing:.2em">AMON</div>
-                    </div>
-                  </div>
-                  <div class="num" id="cardNum">•••• •••• •••• ••••</div>
-                  <div class="bot">
-                    <div><div class="lbl">Titular</div><div class="v" id="cardName">SEU NOME</div></div>
-                    <div style="text-align:right"><div class="lbl">Validade</div><div class="v" id="cardExp">MM/AA</div></div>
-                  </div>
-                </div>
-                <div class="frow" style="margin-top:24px"><div><label for="cnome">Nome impresso no cartão</label><input id="cnome" placeholder="NOME COMO NO CARTÃO" autocomplete="cc-name"></div></div>
-                <div class="frow"><div><label for="cnum">Número do cartão</label><input id="cnum" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number"></div></div>
-                <div class="frow three">
-                  <div><label for="cval">Validade</label><input id="cval" inputmode="numeric" placeholder="MM/AA" maxlength="5" autocomplete="cc-exp"></div>
-                  <div><label for="ccvv">CVV</label><input id="ccvv" inputmode="numeric" placeholder="000" maxlength="4" autocomplete="cc-csc"></div>
-                  <div><label for="ccpf">CPF do titular</label><input id="ccpf" placeholder="000.000.000-00"></div>
-                </div>
-                <div class="pay-note"><b>Cobrança única de R$ 397.</b> Esta consulta não gera assinatura, não ativa recorrência e não faz nenhuma cobrança futura no seu cartão.</div>
-              </div>
-            </div>
+      <div class="pay-note" style="margin-top:20px"><b>Como funciona:</b> 1&nbsp;·&nbsp;Criar acesso ao portal &nbsp;&nbsp;2&nbsp;·&nbsp;Pagamento &nbsp;&nbsp;3&nbsp;·&nbsp;Agendamento. A confirmação é automática — sem envio de comprovante.</div>
 
-            <!-- PIX -->
-            <div class="pay-opt" id="opt-pix">
-              <button type="button" class="pay-head" aria-expanded="false" onclick="pick('pix')">
-                <span class="radio"></span>
-                <span class="pay-title">Pix</span>
-                <span class="pay-tag">Confirmação em segundos</span>
-              </button>
-              <div class="pay-body">
-                <div class="pix-grid">
-                  <div class="pix-qr">
-                    <svg class="qr" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR Code ilustrativo"><rect width="25" height="25" fill="#fff"/><g fill="#2F2B2A"><rect x="0" y="0" width="1" height="1"/><rect x="1" y="0" width="1" height="1"/><rect x="2" y="0" width="1" height="1"/><rect x="3" y="0" width="1" height="1"/><rect x="4" y="0" width="1" height="1"/><rect x="5" y="0" width="1" height="1"/><rect x="6" y="0" width="1" height="1"/><rect x="10" y="0" width="1" height="1"/><rect x="11" y="0" width="1" height="1"/><rect x="12" y="0" width="1" height="1"/><rect x="16" y="0" width="1" height="1"/><rect x="18" y="0" width="1" height="1"/><rect x="19" y="0" width="1" height="1"/><rect x="20" y="0" width="1" height="1"/><rect x="21" y="0" width="1" height="1"/><rect x="22" y="0" width="1" height="1"/><rect x="23" y="0" width="1" height="1"/><rect x="24" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="10" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="13" y="1" width="1" height="1"/><rect x="14" y="1" width="1" height="1"/><rect x="18" y="1" width="1" height="1"/><rect x="24" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="12" y="2" width="1" height="1"/><rect x="15" y="2" width="1" height="1"/><rect x="16" y="2" width="1" height="1"/><rect x="18" y="2" width="1" height="1"/><rect x="20" y="2" width="1" height="1"/><rect x="21" y="2" width="1" height="1"/><rect x="22" y="2" width="1" height="1"/><rect x="24" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="10" y="3" width="1" height="1"/><rect x="11" y="3" width="1" height="1"/><rect x="12" y="3" width="1" height="1"/><rect x="18" y="3" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/><rect x="21" y="3" width="1" height="1"/><rect x="22" y="3" width="1" height="1"/><rect x="24" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="6" y="4" width="1" height="1"/><rect x="11" y="4" width="1" height="1"/><rect x="18" y="4" width="1" height="1"/><rect x="20" y="4" width="1" height="1"/><rect x="21" y="4" width="1" height="1"/><rect x="22" y="4" width="1" height="1"/><rect x="24" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="6" y="5" width="1" height="1"/><rect x="10" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="12" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="14" y="5" width="1" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="16" y="5" width="1" height="1"/><rect x="18" y="5" width="1" height="1"/><rect x="24" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="5" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/><rect x="12" y="6" width="1" height="1"/><rect x="14" y="6" width="1" height="1"/><rect x="16" y="6" width="1" height="1"/><rect x="18" y="6" width="1" height="1"/><rect x="19" y="6" width="1" height="1"/><rect x="20" y="6" width="1" height="1"/><rect x="21" y="6" width="1" height="1"/><rect x="22" y="6" width="1" height="1"/><rect x="23" y="6" width="1" height="1"/><rect x="24" y="6" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="12" y="7" width="1" height="1"/><rect x="6" y="8" width="1" height="1"/><rect x="11" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="13" y="8" width="1" height="1"/><rect x="14" y="8" width="1" height="1"/><rect x="15" y="8" width="1" height="1"/><rect x="1" y="9" width="1" height="1"/><rect x="3" y="9" width="1" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="12" y="9" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="16" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="18" y="9" width="1" height="1"/><rect x="21" y="9" width="1" height="1"/><rect x="22" y="9" width="1" height="1"/><rect x="23" y="9" width="1" height="1"/><rect x="3" y="10" width="1" height="1"/><rect x="6" y="10" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/><rect x="9" y="10" width="1" height="1"/><rect x="10" y="10" width="1" height="1"/><rect x="11" y="10" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="19" y="10" width="1" height="1"/><rect x="22" y="10" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="3" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="8" y="11" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="12" y="11" width="1" height="1"/><rect x="14" y="11" width="1" height="1"/><rect x="17" y="11" width="1" height="1"/><rect x="18" y="11" width="1" height="1"/><rect x="20" y="11" width="1" height="1"/><rect x="22" y="11" width="1" height="1"/><rect x="23" y="11" width="1" height="1"/><rect x="1" y="12" width="1" height="1"/><rect x="2" y="12" width="1" height="1"/><rect x="5" y="12" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="7" y="12" width="1" height="1"/><rect x="8" y="12" width="1" height="1"/><rect x="9" y="12" width="1" height="1"/><rect x="11" y="12" width="1" height="1"/><rect x="12" y="12" width="1" height="1"/><rect x="13" y="12" width="1" height="1"/><rect x="15" y="12" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="19" y="12" width="1" height="1"/><rect x="21" y="12" width="1" height="1"/><rect x="22" y="12" width="1" height="1"/><rect x="0" y="13" width="1" height="1"/><rect x="3" y="13" width="1" height="1"/><rect x="4" y="13" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/><rect x="7" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="12" y="13" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="15" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="17" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="19" y="13" width="1" height="1"/><rect x="20" y="13" width="1" height="1"/><rect x="22" y="13" width="1" height="1"/><rect x="0" y="14" width="1" height="1"/><rect x="6" y="14" width="1" height="1"/><rect x="8" y="14" width="1" height="1"/><rect x="9" y="14" width="1" height="1"/><rect x="10" y="14" width="1" height="1"/><rect x="11" y="14" width="1" height="1"/><rect x="13" y="14" width="1" height="1"/><rect x="15" y="14" width="1" height="1"/><rect x="16" y="14" width="1" height="1"/><rect x="21" y="14" width="1" height="1"/><rect x="22" y="14" width="1" height="1"/><rect x="2" y="15" width="1" height="1"/><rect x="8" y="15" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="12" y="15" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="15" y="15" width="1" height="1"/><rect x="18" y="15" width="1" height="1"/><rect x="22" y="15" width="1" height="1"/><rect x="24" y="15" width="1" height="1"/><rect x="0" y="16" width="1" height="1"/><rect x="2" y="16" width="1" height="1"/><rect x="3" y="16" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="6" y="16" width="1" height="1"/><rect x="9" y="16" width="1" height="1"/><rect x="10" y="16" width="1" height="1"/><rect x="11" y="16" width="1" height="1"/><rect x="15" y="16" width="1" height="1"/><rect x="16" y="16" width="1" height="1"/><rect x="17" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="19" y="16" width="1" height="1"/><rect x="20" y="16" width="1" height="1"/><rect x="21" y="16" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="16" y="17" width="1" height="1"/><rect x="20" y="17" width="1" height="1"/><rect x="21" y="17" width="1" height="1"/><rect x="22" y="17" width="1" height="1"/><rect x="23" y="17" width="1" height="1"/><rect x="0" y="18" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="2" y="18" width="1" height="1"/><rect x="3" y="18" width="1" height="1"/><rect x="4" y="18" width="1" height="1"/><rect x="5" y="18" width="1" height="1"/><rect x="6" y="18" width="1" height="1"/><rect x="9" y="18" width="1" height="1"/><rect x="12" y="18" width="1" height="1"/><rect x="14" y="18" width="1" height="1"/><rect x="16" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="20" y="18" width="1" height="1"/><rect x="23" y="18" width="1" height="1"/><rect x="24" y="18" width="1" height="1"/><rect x="0" y="19" width="1" height="1"/><rect x="6" y="19" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="10" y="19" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="16" y="19" width="1" height="1"/><rect x="20" y="19" width="1" height="1"/><rect x="21" y="19" width="1" height="1"/><rect x="22" y="19" width="1" height="1"/><rect x="23" y="19" width="1" height="1"/><rect x="0" y="20" width="1" height="1"/><rect x="2" y="20" width="1" height="1"/><rect x="3" y="20" width="1" height="1"/><rect x="4" y="20" width="1" height="1"/><rect x="6" y="20" width="1" height="1"/><rect x="13" y="20" width="1" height="1"/><rect x="14" y="20" width="1" height="1"/><rect x="15" y="20" width="1" height="1"/><rect x="16" y="20" width="1" height="1"/><rect x="17" y="20" width="1" height="1"/><rect x="18" y="20" width="1" height="1"/><rect x="19" y="20" width="1" height="1"/><rect x="20" y="20" width="1" height="1"/><rect x="0" y="21" width="1" height="1"/><rect x="2" y="21" width="1" height="1"/><rect x="3" y="21" width="1" height="1"/><rect x="4" y="21" width="1" height="1"/><rect x="6" y="21" width="1" height="1"/><rect x="9" y="21" width="1" height="1"/><rect x="10" y="21" width="1" height="1"/><rect x="11" y="21" width="1" height="1"/><rect x="14" y="21" width="1" height="1"/><rect x="16" y="21" width="1" height="1"/><rect x="22" y="21" width="1" height="1"/><rect x="24" y="21" width="1" height="1"/><rect x="0" y="22" width="1" height="1"/><rect x="2" y="22" width="1" height="1"/><rect x="3" y="22" width="1" height="1"/><rect x="4" y="22" width="1" height="1"/><rect x="6" y="22" width="1" height="1"/><rect x="13" y="22" width="1" height="1"/><rect x="15" y="22" width="1" height="1"/><rect x="18" y="22" width="1" height="1"/><rect x="20" y="22" width="1" height="1"/><rect x="21" y="22" width="1" height="1"/><rect x="23" y="22" width="1" height="1"/><rect x="24" y="22" width="1" height="1"/><rect x="0" y="23" width="1" height="1"/><rect x="6" y="23" width="1" height="1"/><rect x="9" y="23" width="1" height="1"/><rect x="10" y="23" width="1" height="1"/><rect x="13" y="23" width="1" height="1"/><rect x="15" y="23" width="1" height="1"/><rect x="19" y="23" width="1" height="1"/><rect x="21" y="23" width="1" height="1"/><rect x="23" y="23" width="1" height="1"/><rect x="24" y="23" width="1" height="1"/><rect x="0" y="24" width="1" height="1"/><rect x="1" y="24" width="1" height="1"/><rect x="2" y="24" width="1" height="1"/><rect x="3" y="24" width="1" height="1"/><rect x="4" y="24" width="1" height="1"/><rect x="5" y="24" width="1" height="1"/><rect x="6" y="24" width="1" height="1"/><rect x="9" y="24" width="1" height="1"/><rect x="11" y="24" width="1" height="1"/><rect x="14" y="24" width="1" height="1"/><rect x="16" y="24" width="1" height="1"/><rect x="18" y="24" width="1" height="1"/><rect x="24" y="24" width="1" height="1"/></g></svg>
-                    <div class="qr-cap">QR Code ilustrativo</div>
-                  </div>
-                  <div>
-                    <div class="pix-val">R$ 397,00</div>
-                    <p class="pix-help">Abra o app do seu banco, escolha <b>Pix &gt; Ler QR Code</b> e aponte a câmera para o código ao lado. Ou use o Pix copia e cola abaixo.</p>
-                    <label for="pixcode" style="margin-top:20px">Pix copia e cola</label>
-                    <div class="pix-copy">
-                      <input id="pixcode" readonly value="00020126580014BR.GOV.BCB.PIX0136amon-consulta-2026520400005303986540439755802BR6009BRASIL62070503***6304A1B2">
-                      <button type="button" class="btn btn-line" onclick="copyPix(this)">Copiar</button>
-                    </div>
-                    <div class="pix-status"><span class="dot"></span> Aguardando pagamento — a confirmação é automática. Assim que o Pix cair, esta página avança sozinha para o agendamento.</div>
-                  </div>
-                </div>
-                <div class="pay-note"><b>Pagamento único de R$ 397.</b> O Pix não cria assinatura nem gera qualquer cobrança futura.</div>
-              </div>
-            </div>
-          </div>
-
-          <label class="check-line"><input type="checkbox" id="ok1"> <span>Li e concordo com os <a href="/termos-de-uso.html">Termos de Uso</a>, com a <a href="/politica-privacidade.html">Política de Privacidade</a> e com a <a href="#politica" onclick="abrirPolitica(event)">Política de Remarcações e Cancelamentos</a>, e autorizo o tratamento dos meus dados de saúde para a realização desta consulta (LGPD).</span></label>
-
-          <details class="policy" id="politica">
+      <details class="policy" id="politica">
             <summary>Política de Remarcações e Cancelamentos</summary>
             <div class="policy-body">
               <div class="pol">
@@ -516,11 +440,8 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
               </div>
             </div>
           </details>
-        </div>
-
-        <button class="btn btn-fill" style="width:100%;border:none" type="submit">Pagar R$ 397 e escolher meu horário</button>
-        <div class="secure"><span>Pagamento criptografado</span><span>Sem recorrência</span><span>LGPD conforme</span><span>Nota fiscal emitida</span></div>
-      </form>
+      <div class="secure"><span>Pagamento criptografado</span><span>Sem recorrência</span><span>LGPD conforme</span><span>Nota fiscal emitida</span></div>
+    
     </div>
 
     <div>
@@ -639,51 +560,7 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
   </div>
 </footer>
 
-<script>
-/* --- abas de pagamento (integração Pix/cartão será conectada depois) --- */
-function pick(m){
-  document.querySelectorAll('.pay-opt').forEach(o=>{
-    const on = o.id === 'opt-' + m;
-    o.classList.toggle('open', on);
-    o.querySelector('.pay-head').setAttribute('aria-expanded', on);
-  });
-}
 
-/* --- copia e cola do Pix (código ilustrativo) --- */
-function copyPix(btn){
-  const i = document.getElementById('pixcode');
-  navigator.clipboard.writeText(i.value).then(()=>{
-    const t = btn.textContent; btn.textContent = 'Copiado';
-    setTimeout(()=>btn.textContent = t, 1800);
-  }).catch(()=>{ i.select(); document.execCommand('copy'); });
-}
-
-/* --- abre a política ao clicar no link dos termos --- */
-function abrirPolitica(e){
-  e.preventDefault();
-  const d = document.getElementById('politica');
-  d.open = true;
-  d.scrollIntoView({behavior:'smooth', block:'center'});
-}
-
-/* --- espelha os dados no cartão ilustrativo (nada sai desta página) --- */
-const num = document.getElementById('cnum'), nome = document.getElementById('cnome'), val = document.getElementById('cval');
-num.addEventListener('input', e => {
-  let v = e.target.value.replace(/\D/g,'').slice(0,16);
-  e.target.value = v.replace(/(.{4})/g,'$1 ').trim();
-  let masked = (v + '••••••••••••••••').slice(0,16).replace(/(.{4})/g,'$1 ').trim();
-  document.getElementById('cardNum').textContent = masked;
-});
-nome.addEventListener('input', e => {
-  document.getElementById('cardName').textContent = e.target.value.toUpperCase() || 'SEU NOME';
-});
-val.addEventListener('input', e => {
-  let v = e.target.value.replace(/\D/g,'').slice(0,4);
-  if (v.length > 2) v = v.slice(0,2) + '/' + v.slice(2);
-  e.target.value = v;
-  document.getElementById('cardExp').textContent = v || 'MM/AA';
-});
-</script>
 
 
 <!-- ─── Consentimento de cookies (LGPD) ─── -->
