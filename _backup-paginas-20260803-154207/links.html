@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto AMON — Links</title>
+<meta name="description" content="Instituto AMON — Monitoramento oncológico ativo em tempo real para mais qualidade de vida. Avaliação de Risco, planos de acompanhamento e atendimento no Brasil e exterior.">
+
+<!-- não indexar esta página nos buscadores: ela é só para o link da bio -->
+<meta name="robots" content="noindex, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --rose:#A67B78; --rose-btn:#B08D8A; --rose-dark:#7A5250; --rose-mist:#F6EFEE;
+  --beige:#F0EAE5; --beige-soft:#F7F4F1;
+  --ink:#2F2B2A; --ink-soft:#6B6462; --paper:#FFFFFF; --line:#E7DFDB;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Lato',sans-serif;color:var(--ink);
+  background:var(--beige-soft);
+  line-height:1.7;font-size:15.5px;font-weight:300;
+  min-height:100vh;
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:48px 22px 64px;
+}
+h1,h2,h3{font-family:'Raleway',sans-serif;font-weight:300}
+b,strong{font-weight:700}
+
+.card{width:100%;max-width:460px;text-align:center}
+
+/* ---------- topo: logo + marca ---------- */
+.mk{width:74px;height:auto;fill:url(#amonGrad);fill-rule:evenodd;margin:0 auto}
+.wordmark{margin-top:20px;font-family:'Raleway',sans-serif}
+.wordmark small{
+  display:block;font-size:10px;letter-spacing:.5em;text-indent:.5em;
+  color:#A99490;font-weight:400;margin-bottom:5px;
+}
+.wordmark span{
+  display:block;font-size:34px;letter-spacing:.2em;text-indent:.2em;
+  font-weight:500;color:#2A2523;line-height:1;
+}
+.tagline{
+  margin:22px auto 0;max-width:30em;
+  font-family:'Raleway',sans-serif;font-size:13px;font-weight:400;
+  letter-spacing:.02em;color:var(--rose-dark);line-height:1.6;
+}
+
+/* ---------- destaque (CTA principal) ---------- */
+.cta-primary{
+  display:block;margin:34px 0 12px;
+  padding:18px 24px;
+  background:var(--rose-btn);color:#fff;text-decoration:none;
+  font-family:'Raleway',sans-serif;font-weight:600;font-size:12px;
+  letter-spacing:.2em;text-transform:uppercase;
+  border-radius:2px;transition:background .22s ease;
+}
+.cta-primary:hover{background:var(--rose-dark)}
+
+/* ---------- divisor ---------- */
+.rule{height:1px;background:var(--line);margin:20px 0;border:none}
+
+/* ---------- links ---------- */
+.links{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.link{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 20px;
+  background:var(--paper);border:1px solid var(--line);
+  text-decoration:none;color:var(--ink);
+  border-radius:2px;
+  transition:border-color .2s ease, transform .2s ease;
+  text-align:left;
+}
+.link:hover{border-color:var(--rose);transform:translateY(-1px)}
+.link .ic{
+  width:22px;height:22px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--rose);
+}
+.link .ic svg{width:20px;height:20px;stroke:var(--rose);fill:none;stroke-width:1.5}
+.link .tx{flex:1;min-width:0}
+.link .tx .l1{
+  font-family:'Raleway',sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
+}
+.link .tx .l2{
+  font-size:12px;color:var(--ink-soft);font-weight:300;margin-top:1px;
+  line-height:1.4;
+}
+.link .arrow{color:#CBBFBB;font-size:18px;flex-shrink:0;transition:color .2s}
+.link:hover .arrow{color:var(--rose)}
+
+/* whatsapp com leve destaque */
+.link.wa{border-color:#CFE3D2;background:#F4FAF5}
+.link.wa .ic svg{stroke:#4A8B5C}
+.link.wa:hover{border-color:#4A8B5C}
+
+/* ---------- rodapé ---------- */
+.foot{
+  margin-top:34px;font-family:'Raleway',sans-serif;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:#B3A9A5;line-height:1.9;
+}
+.foot a{color:var(--rose-dark);text-decoration:none}
+
+@media(max-width:420px){
+  body{padding:36px 16px 48px}
+  .wordmark span{font-size:29px}
+}
+</style>
+</head>
+<body>
+
+<!-- gradiente do logo (invisível, só define a cor do SVG) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="amonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#8A6462"/>
+  <stop offset="55%" stop-color="#A67B78"/>
+  <stop offset="100%" stop-color="#C6A9A6"/>
+</linearGradient>
+</defs></svg>
+
+<main class="card">
+
+  <!-- LOGO oficial -->
+  <svg class="mk" viewBox="0 0 312.75 306.50" role="img" aria-label="Instituto AMON"><path d="M312.25,37.75 310.00,35.50 306.75,34.25 301.50,33.25 299.00,32.25 291.25,31.25 287.75,30.25 270.75,28.50 254.50,28.50 252.75,29.00 246.25,29.25 238.25,30.25 234.75,31.25 227.25,32.25 221.25,34.25 213.00,36.25 199.75,41.25 190.00,46.25 189.25,46.25 188.00,47.25 187.25,47.25 175.50,54.25 162.00,64.25 151.50,73.50 142.25,83.25 132.50,95.50 123.50,109.25 117.50,120.25 113.75,128.75 115.50,130.00 124.50,133.00 131.25,134.25 134.50,134.00 140.00,122.25 146.25,111.75 155.25,99.50 162.50,91.50 171.50,83.00 181.75,75.00 190.50,69.25 202.25,63.00 203.00,63.00 211.25,59.00 218.00,57.00 222.00,55.25 224.25,55.00 233.75,52.25 245.50,50.25 251.50,50.00 256.25,49.25 269.75,49.25 272.50,49.75 280.25,50.00 285.75,51.00 287.25,53.00 286.25,55.75 281.25,66.00 277.00,73.50 269.00,85.50 259.00,97.75 247.00,109.25 233.75,119.25 222.50,126.00 209.00,132.25 204.25,134.00 204.00,135.00 205.25,137.50 208.00,146.50 209.25,153.25 209.75,153.50 223.50,148.00 239.00,140.00 255.25,129.00 268.00,118.00 276.00,109.75 282.00,102.75 288.00,94.75 293.00,87.00 298.75,77.00 303.00,68.25 307.00,58.75 311.00,47.25 311.25,45.25 312.00,44.00 312.50,41.50Z"/><path d="M175.75,92.50 175.25,92.50 161.25,107.50 161.25,108.75 164.25,112.75 170.00,122.25 174.25,131.25 175.25,132.50 177.25,138.25 179.25,142.25 183.00,153.75 183.25,156.00 185.25,162.75 187.25,176.00 187.25,180.25 187.75,183.00 187.25,204.25 185.25,216.75 184.25,219.50 183.25,225.25 181.25,230.50 180.25,235.00 179.50,236.00 177.00,243.25 171.25,255.50 166.25,264.25 160.25,273.50 157.50,276.25 153.50,276.25 150.00,273.00 145.00,266.25 140.00,258.25 139.00,255.50 136.00,250.25 129.00,232.00 128.00,227.00 126.00,221.00 125.00,213.50 124.00,209.75 124.00,206.75 123.00,200.25 123.00,179.50 124.00,173.50 124.00,170.50 124.75,168.00 124.50,167.00 105.00,162.00 104.25,163.75 102.50,178.25 102.25,199.75 103.50,212.75 107.25,231.50 108.25,233.75 108.25,235.00 110.25,241.50 113.25,248.75 113.25,249.75 121.25,266.75 131.50,283.00 138.25,291.75 148.50,303.00 151.25,305.00 153.25,306.00 155.00,306.25 158.25,306.00 162.00,303.75 168.75,296.50 180.00,281.75 186.00,272.50 191.75,261.75 197.00,249.25 198.00,247.75 202.00,234.75 203.00,232.75 203.00,231.25 206.00,219.75 207.00,210.50 208.00,206.25 208.00,200.25 208.75,193.00 208.25,177.75 207.00,169.25 206.75,164.25 206.00,162.25 206.00,160.50 204.00,152.75 203.75,150.00 200.00,138.75 200.00,137.50 194.00,122.75 187.00,109.25 179.75,97.75Z"/><path d="M0.25,37.25 0.25,42.50 3.50,52.50 7.25,61.00 8.25,64.50 15.50,79.25 22.50,90.75 32.00,103.75 40.75,113.75 52.50,125.00 63.75,133.75 74.50,140.75 88.25,148.00 91.50,149.00 100.25,153.00 104.50,154.00 112.75,157.00 118.75,158.00 121.50,159.00 123.25,159.00 126.00,160.00 135.75,161.00 140.50,162.00 156.00,162.50 169.75,162.00 175.50,161.25 176.00,160.75 172.00,146.00 169.75,141.25 159.25,141.75 141.00,141.25 135.75,140.25 132.75,140.25 129.25,139.25 122.25,138.25 116.25,136.25 111.50,135.25 107.00,133.25 106.00,133.25 104.25,132.25 100.75,131.25 86.75,124.25 75.50,117.00 66.50,110.00 58.25,102.25 49.50,92.75 44.00,85.75 34.25,71.25 25.00,53.75 25.00,52.50 26.75,51.00 29.50,51.00 33.50,50.25 55.25,50.00 67.00,51.00 82.50,54.00 95.25,58.00 109.00,64.00 123.00,72.25 130.00,77.25 136.50,82.75 138.00,81.75 150.75,66.00 150.50,65.25 134.75,54.25 122.75,47.25 107.75,40.25 90.25,34.25 89.00,34.25 82.25,32.25 80.50,32.25 77.50,31.25 75.50,31.25 71.25,30.25 62.75,29.25 51.50,28.75 34.50,29.25 19.00,31.25 17.00,32.00 9.25,33.25 2.50,35.25Z"/><path d="M151.00,0.50 146.50,2.25 143.25,4.50 140.25,7.75 138.50,10.50 137.25,13.25 136.25,17.75 136.25,21.75 137.25,26.00 138.25,28.50 140.50,32.00 143.50,35.00 146.00,36.75 151.50,39.00 158.50,39.25 161.50,38.75 165.75,37.00 168.50,35.00 171.75,31.75 173.75,28.50 175.00,25.50 175.00,24.00 175.75,22.00 175.75,17.50 175.00,13.75 173.75,10.75 171.00,6.75 168.50,4.25 165.50,2.25 160.00,0.25 154.25,0.00Z"/><path d="M60.50,162.25 55.00,164.25 52.00,166.25 47.25,171.75 45.25,176.50 44.75,179.75 45.25,186.75 47.25,191.50 49.50,194.75 54.75,199.00 59.00,200.75 62.00,201.25 67.00,201.25 70.00,200.75 76.00,197.75 81.00,192.50 83.75,186.00 84.00,178.50 83.00,174.75 80.75,170.50 75.50,165.25 69.50,162.50 66.25,162.00Z"/><path d="M243.75,162.25 240.25,163.25 236.25,165.50 232.25,169.25 230.50,171.75 228.25,177.50 228.25,185.75 229.25,189.00 231.25,192.75 235.50,197.25 238.00,199.00 243.25,201.00 252.00,201.00 255.75,199.75 260.50,196.75 262.75,194.50 265.00,191.25 267.00,185.75 267.00,177.50 266.00,174.25 263.75,170.25 260.00,166.25 257.50,164.50 251.50,162.25Z"/></svg>
+
+  <div class="wordmark">
+    <small>INSTITUTO</small>
+    <span>AMON</span>
+  </div>
+
+  <p class="tagline">
+    Monitoramento ativo em tempo real<br>para mais qualidade de vida.
+  </p>
+
+  <!-- CTA principal -->
+  <a class="cta-primary" href="/agendar-avaliacao">Agende sua avaliação</a>
+
+  <hr class="rule">
+
+  <nav class="links">
+
+    <!-- Método AMON -->
+    <a class="link" href="/#programa">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l2.5 2.5L16 9"/></svg></span>
+      <span class="tx">
+        <span class="l1">Método AMON</span>
+        <span class="l2">Como funciona o monitoramento contínuo</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Pacientes Brasil e Exterior -->
+    <a class="link" href="/pacientes-exterior">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg></span>
+      <span class="tx">
+        <span class="l1">Pacientes no Brasil e Exterior</span>
+        <span class="l2">Atendimento onde você estiver</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Nutrologia Oncológica -->
+    <a class="link" href="/nutrologia-oncologica">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 11c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg></span>
+      <span class="tx">
+        <span class="l1">Nutrologia Oncológica</span>
+        <span class="l2">Suporte nutricional no tratamento</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Avaliação de Risco -->
+    <a class="link" href="/agendar-avaliacao">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span class="tx">
+        <span class="l1">Avaliação de Risco</span>
+        <span class="l2">Avaliação de Risco e Cuidado</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Planos -->
+    <a class="link" href="/#planos">
+      <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
+      <span class="tx">
+        <span class="l1">Planos de Acompanhamento Integral</span>
+        <span class="l2">Essencial, Integral e Intensivo</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <hr class="rule">
+
+    <!-- WhatsApp -->
+    <a class="link wa" href="https://wa.me/5527999703538?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20do%20Instituto%20AMON." target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-8.5 8.5 8.5 8.5 0 01-4-1L3 20l1-5.5a8.5 8.5 0 01-1-4A8.38 8.38 0 0111.5 3 8.5 8.5 0 0121 11.5z"/></svg></span>
+      <span class="tx">
+        <span class="l1">WhatsApp</span>
+        <span class="l2">Fale com nossa equipe</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+    <!-- Site oficial -->
+    <a class="link" href="/">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18 15 15 0 010-18"/></svg></span>
+      <span class="tx">
+        <span class="l1">Site Oficial</span>
+        <span class="l2">institutoamon.com.br</span>
+      </span>
+      <span class="arrow">›</span>
+    </a>
+
+  </nav>
+
+  <p class="foot">
+    Instituto AMON · Oncologia Integrada<br>
+    <a href="/termos-de-uso">Termos de uso</a>
+  </p>
+
+</main>
+</body>
+</html>
