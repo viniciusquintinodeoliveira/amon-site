@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/assinar-essencial", "destination": "/#planos", "permanent": false },
+    { "source": "/assinar-integral", "destination": "/#planos", "permanent": false },
+    { "source": "/assinar-intensivo", "destination": "/#planos", "permanent": false },
+    { "source": "/agendar-avaliacao", "destination": "https://app.institutoamon.com.br/portal/planos?produto=avaliacao", "permanent": false },
+    { "source": "/agendar-consulta", "destination": "/#planos", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/(.*)",

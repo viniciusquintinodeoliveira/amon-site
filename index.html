@@ -262,6 +262,25 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
   .ck-actions button{width:100%}
   .ck-btn-text{margin-left:0;margin-top:.2rem}
 }
+
+/* v2: planos por duração */
+.plan .term{font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:10px}
+.plan .total-line{font-size:12.5px;color:var(--ink-soft);margin:8px 0 24px}
+.plan .total-line b{color:var(--ink)}
+.bonus{border:1px solid #E5D3D1;background:var(--rose-mist);padding:18px 20px;margin:0 0 30px}
+.nutri{border:1px solid #DCE4DC;background:#F3F6F3;padding:16px 20px;margin:0 0 26px}
+.nutri h5{font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5E7A5E;margin-bottom:8px}
+.nutri li{border-bottom:none !important;padding:5px 0 5px 18px !important;font-size:12.5px !important}
+.bonus h5{font-family:'Raleway',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-dark);margin-bottom:10px}
+.bonus li{border-bottom:none !important;padding:5px 0 5px 18px !important;font-size:12.5px !important}
+.entrada-strip{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border:1px solid var(--line);background:var(--beige-soft);padding:24px 30px;margin-bottom:44px}
+.entrada-strip .t{font-size:14.5px;color:var(--ink-soft)}
+.entrada-strip .t b{color:var(--ink)}
+.entrada-strip .p{font-family:'Raleway',sans-serif;font-size:24px;font-weight:300;color:var(--rose-dark);white-space:nowrap}
+.entrada-strip .p small{font-size:12px;color:var(--ink-soft)}
+.serenidade{margin-top:26px;padding:20px 24px;border-left:2px solid var(--rose);background:var(--beige-soft);font-size:13.5px;color:var(--ink-soft)}
+.serenidade b{color:var(--ink)}
+
 </style>
 </head>
 <body>
@@ -347,14 +366,14 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
         <span class="n">02</span>
         <div>
           <h4>Avaliação de Risco e Cuidado</h4>
-          <p><span class="price">R$ 397</span> · teleconsulta completa + seu Mapa de Risco e Cuidado</p>
+          <p><span class="price">R$ 897</span> · teleconsulta completa + seu Mapa de Risco e Cuidado</p>
         </div>
       </div>
       <div class="item">
         <span class="n">03</span>
         <div>
           <h4>Planos de acompanhamento</h4>
-          <p><span class="price">a partir de R$ 397/mês</span> · monitoramento ativo contínuo</p>
+          <p><span class="price">a partir de R$ 497/mês</span> · monitoramento ativo contínuo</p>
         </div>
       </div>
     </div>
@@ -403,7 +422,7 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
       <p style="margin-top:20px;color:var(--ink-soft);font-size:15.5px">Antes de qualquer assinatura, a equipe médica AMON avalia seu caso por completo — histórico, exames, estado nutricional e funcional — e você recebe o seu <b>Mapa de Risco e Cuidado</b>: um relatório individual com seus pontos de atenção e o que fazer em cada um. Seu, para sempre, assine ou não.</p>
     </div>
     <div class="aval-card">
-      <div class="p">R$ 397 <small>· pagamento único</small></div>
+      <div class="p">R$ 897 <small>· pagamento único</small></div>
       <ul>
         <li>Teleconsulta completa com a equipe médica AMON (50–60 min)</li>
         <li>Análise de exames, nutrição e histórico</li>
@@ -412,74 +431,128 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
         <li>Versão do relatório para o seu oncologista</li>
         <li>Laudo Médico Oficial</li>
       </ul>
-      <div class="credit"><b>Assinou em até 7 dias?</b> Os R$ 397 viram crédito integral na sua primeira mensalidade — a avaliação sai de graça.</div>
-      <a class="btn btn-fill" style="width:100%" href="/agendar-avaliacao">Agendar minha avaliação</a>
+      <div class="credit"><b>Assinou em até 7 dias?</b> Os R$ 897 viram crédito integral no seu programa e a avaliação sai de graça.</div>
+      <a class="btn btn-fill" style="width:100%" href="https://app.institutoamon.com.br/portal/planos?produto=avaliacao">Agendar minha avaliação</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════ 6. PLANOS ══════════ -->
+<!-- ══════════ 6. PLANOS v2 (MOCKUP) ══════════ -->
 <section id="planos">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Programas de assinatura</span>
-      <h2>Escolha o nível de acompanhamento <b>que a sua fase pede.</b></h2>
-      <p>Mensalidade no cartão, sem fidelidade — pause ou cancele quando quiser. A indicação do plano ideal é feita pela equipe médica na Avaliação de Risco e Cuidado.</p>
+      <span class="eyebrow">O cuidado entre as consultas</span>
+      <h2>O tratamento tem intervalos. <b>O cuidado, não.</b></h2>
+      <p>Entre uma consulta e outra existem semanas inteiras. É nesse meio tempo que aparece o enjoo que não passa, ou aquela dúvida de madrugada que o Google só faz crescer. O acompanhamento AMON foi feito para esses dias. A equipe confere seus sintomas toda semana, cuida da sua alimentação e responde suas dúvidas em horas, sempre em parceria com o seu oncologista, que recebe um relatório mensal e segue no comando do tratamento. Você escolhe apenas por quanto tempo.</p>
     </div>
+
+    <div class="entrada-strip">
+      <span class="t"><b>Comece pela Avaliação de Risco e Cuidado.</b> Teleconsulta completa (50–60 min), análise de exames e histórico, Mapa de Risco e Cuidado individual e devolutiva com calma. <b>Assinou em até 7 dias? Os R$ 897 viram crédito integral no seu plano. A avaliação sai de graça.</b> Consulta avulsa de retorno: R$ 997.</span>
+      <span class="p">R$ 897<small> · pagamento único</small></span>
+    </div>
+
     <div class="plans">
       <div class="plan">
-        <h3>Essencial</h3>
-        <p class="who">Remissão ou vigilância — para manter a segurança de que nada passa despercebido.</p>
-        <div class="price">R$ 397<small>/mês</small></div>
-        <p class="cancel">Pause ou cancele quando quiser</p>
+        <p class="term">Compromisso de 4 meses</p>
+        <h3>Primeiros Resultados</h3>
+        <p class="who">O ciclo mínimo da nutrologia oncológica: quatro retornos para uma evolução que aparece.</p>
+        <div class="price">R$ 697<small>/mês</small></div>
+        <p class="total-line">4 meses · <b>R$ 2.788 no total</b> · à vista no Pix ou em 4x sem juros no cartão</p>
+        <div class="nutri">
+          <h5>Nutrição oncológica inclusa</h5>
+          <ul>
+            <li><b>Plano nutricional individual</b></li>
+            <li>1 consulta com nutricionista na entrada do programa</li>
+          </ul>
+        </div>
         <ul>
+          <li>1 teleconsulta por mês com a equipe médica AMON</li>
           <li>Acompanhamento semanal pelo portal</li>
-          <li>Primeira consulta incluída</li>
           <li>Alertas automáticos ao primeiro sinal de mudança</li>
-          <li>Equipe revisando sua evolução semanalmente</li>
-          <li>Canal direto com resposta em até 24h úteis (WhatsApp)</li>
-          <li>Resumo mensal da sua evolução</li>
-          <li>Laudo Médico Oficial</li>
-        </ul>
-        <a class="btn btn-line" href="/assinar-essencial">Começar pelo Essencial</a>
-      </div>
-      <div class="plan featured">
-        <span class="tag">Mais indicado</span>
-        <h3>Integral</h3>
-        <p class="who">Tratamento ativo — quimio, rádio ou hormonioterapia com a equipe ao seu lado entre os ciclos.</p>
-        <div class="price">R$ 897<small>/mês</small></div>
-        <p class="cancel">Pause ou cancele quando quiser</p>
-        <ul>
-          <li><b>Tudo do Essencial</b></li>
+          <li>Equipe revisando sua evolução toda semana</li>
           <li>Check-ins nos dias críticos após cada ciclo</li>
           <li>Busca ativa: a equipe liga para você no primeiro sinal</li>
-          <li>1 teleconsulta mensal com a equipe médica AMON</li>
-          <li>Plano de Nutrologia Oncológica</li>
+          <li>Nutrologia oncológica acompanhada pela equipe médica</li>
           <li>Plano de Cuidados Paliativos</li>
-          <li>Relatório para o seu oncologista a cada ciclo</li>
-          <li>Resposta em até 8h úteis (WhatsApp)</li>
+          <li>Relatório mensal para o seu oncologista</li>
+          <li>Resumo mensal da sua evolução</li>
+          <li>WhatsApp com resposta em até 24h úteis</li>
           <li>Laudo Médico Oficial</li>
         </ul>
-        <a class="btn btn-fill" href="/assinar-integral">Quero o Integral</a>
+        <a class="btn btn-line" href="https://app.institutoamon.com.br/portal/planos?produto=plano_4m">Começar com 4 meses</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">Protocolo completo</span>
+        <p class="term">Compromisso de 6 meses</p>
+        <h3>Tratamento Completo</h3>
+        <p class="who">O arco inteiro de um protocolo de tratamento, do início à reavaliação, com economia.</p>
+        <div class="price">R$ 597<small>/mês</small></div>
+        <p class="total-line">6 meses · <b>R$ 3.582 no total</b> · à vista no Pix ou em 6x sem juros no cartão</p>
+        <div class="nutri">
+          <h5>Nutrição oncológica inclusa</h5>
+          <ul>
+            <li><b>Plano nutricional individual</b></li>
+            <li>2 consultas com nutricionista: na entrada e no 3º mês</li>
+          </ul>
+        </div>
+        <ul>
+          <li>1 teleconsulta por mês com a equipe médica AMON</li>
+          <li>Acompanhamento semanal pelo portal</li>
+          <li>Alertas automáticos ao primeiro sinal de mudança</li>
+          <li>Equipe revisando sua evolução toda semana</li>
+          <li>Check-ins nos dias críticos após cada ciclo</li>
+          <li>Busca ativa: a equipe liga para você no primeiro sinal</li>
+          <li>Nutrologia oncológica acompanhada pela equipe médica</li>
+          <li>Plano de Cuidados Paliativos</li>
+          <li>Relatório mensal para o seu oncologista</li>
+          <li>Resumo mensal da sua evolução</li>
+          <li>WhatsApp com resposta em até 24h úteis</li>
+          <li>Laudo Médico Oficial</li>
+        </ul>
+        <a class="btn btn-fill" href="https://app.institutoamon.com.br/portal/planos?produto=plano_6m">Quero os 6 meses</a>
       </div>
       <div class="plan">
-        <h3>Intensivo</h3>
-        <p class="who">Alto risco, doença avançada ou cuidados de conforto — presença diária da equipe.</p>
-        <div class="price">R$ 1.497<small>/mês</small></div>
-        <p class="cancel">Pause ou cancele quando quiser</p>
+        <p class="term">Compromisso de 12 meses</p>
+        <h3>Ano de Cuidado Contínuo</h3>
+        <p class="who">Um ano inteiro de vigilância pagando, por mês, metade do preço de uma consulta avulsa.</p>
+        <div class="price">R$ 497<small>/mês</small></div>
+        <p class="total-line">12 meses · <b>R$ 5.964 no total</b> · à vista no Pix ou em 12x sem juros no cartão</p>
+        <div class="nutri">
+          <h5>Nutrição oncológica inclusa</h5>
+          <ul>
+            <li><b>Plano nutricional individual</b></li>
+            <li>4 consultas com nutricionista no ano, uma a cada 3 meses</li>
+          </ul>
+        </div>
+        <div class="bonus">
+          <h5>Bônus do plano anual</h5>
+          <ul>
+            <li>WhatsApp com resposta em até 4 horas úteis</li>
+            <li>Encaixe preferencial: consulta em até 48h quando precisar</li>
+            <li>1 consulta de orientação familiar por semestre, inclusa</li>
+            <li>Revisão ampliada do plano de cuidado a cada 6 meses</li>
+            <li>Preço travado durante todo o ano</li>
+          </ul>
+        </div>
         <ul>
-          <li><b>Tudo do Integral</b></li>
-          <li>Contato diário com escalonamento automático</li>
-          <li>2 teleconsultas/mês + encaixe de urgência</li>
-          <li>Resposta em 2–4h em horário comercial (WhatsApp)</li>
-          <li>Orientação familiar</li>
-          <li>Suporte dedicado ao cuidador incluso</li>
-          <li>Articulação com a equipe hospitalar</li>
+          <li>1 teleconsulta por mês com a equipe médica AMON</li>
+          <li>Acompanhamento semanal pelo portal</li>
+          <li>Alertas automáticos ao primeiro sinal de mudança</li>
+          <li>Equipe revisando sua evolução toda semana</li>
+          <li>Check-ins nos dias críticos após cada ciclo</li>
+          <li>Busca ativa: a equipe liga para você no primeiro sinal</li>
+          <li>Nutrologia oncológica acompanhada pela equipe médica</li>
+          <li>Plano de Cuidados Paliativos</li>
+          <li>Relatório mensal para o seu oncologista</li>
+          <li>Resumo mensal da sua evolução</li>
+          <li>WhatsApp com resposta em até 24h úteis</li>
           <li>Laudo Médico Oficial</li>
         </ul>
-        <a class="btn btn-line" href="/assinar-intensivo">Falar sobre o Intensivo</a>
+        <a class="btn btn-line" href="https://app.institutoamon.com.br/portal/planos?produto=plano_12m">Quero o ano completo</a>
       </div>
     </div>
+
+    <div class="serenidade"><b>Para a sua serenidade:</b> se algo imprevisto acontecer e o acompanhamento precisar parar antes do fim, devolvemos o valor proporcional do período não utilizado, sem multa, sem taxa e sem burocracia. O compromisso é com o seu cuidado, nunca contra você.</div>
   </div>
 </section>
 
@@ -596,7 +669,7 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
         <h3>Onde você estiver</h3>
         <p>Não importa onde você esteja — o Instituto AMON atende em todo o território nacional com sistema próprio e registrado, equipe multidisciplinar e acompanhamento contínuo entre as consultas.</p>
         <div style="margin-top:32px">
-          <a class="btn btn-fill" href="/agendar-consulta">Agendar consulta</a>
+          <a class="btn btn-fill" href="#planos">Agendar consulta</a>
         </div>
       </div>
       <div class="r">
@@ -736,12 +809,12 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
       <p>Nunca — ele o fortalece. Seu oncologista permanece no comando do tratamento e passa a receber relatórios organizados da sua evolução entre as consultas. Trabalhamos junto com a equipe que você já tem.</p>
     </details>
     <details>
-      <summary>Posso pausar ou cancelar?</summary>
-      <p>Sim, a qualquer momento, sem multa e sem fidelidade — direto com a nossa equipe, em um contato. Também é possível pausar temporariamente e voltar depois, preservando todo o seu histórico.</p>
+      <summary>Posso cancelar se precisar?</summary>
+      <p>Sim. Se um imprevisto exigir interromper o programa antes do fim, é só falar com a nossa equipe: devolvemos o valor proporcional do período que você ainda não usou, sem multa e sem burocracia. O compromisso é com o seu cuidado, nunca contra você.</p>
     </details>
     <details>
       <summary>Como funciona a cobrança?</summary>
-      <p>Mensalidade recorrente no cartão de crédito, sem comprometer o limite total. Você recebe aviso antes de cada cobrança e nota fiscal de todos os pagamentos.</p>
+      <p>Você escolhe o programa de 4, 6 ou 12 meses e paga à vista no Pix ou parcelado sem juros no cartão. É uma contratação única, sem renovação automática, e você recebe nota fiscal de cada pagamento. Se precisar interromper por um imprevisto, devolvemos o valor proporcional do período não utilizado.</p>
     </details>
     <details>
       <summary>Atendem na minha cidade?</summary>
@@ -757,7 +830,7 @@ footer .legal{border-top:1px solid #443C3A;padding-top:26px;line-height:1.95;opa
     <p>Dê o primeiro passo hoje: descubra grátis como anda o seu cuidado, ou agende sua Avaliação de Risco e Cuidado.</p>
     <div class="acts">
       <a class="btn btn-fill" href="/calculadora">Fazer a Calculadora gratuita</a>
-      <a class="btn btn-line" href="/agendar-avaliacao">Agendar minha avaliação</a>
+      <a class="btn btn-line" href="https://app.institutoamon.com.br/portal/planos?produto=avaliacao">Agendar minha avaliação</a>
     </div>
   </div>
 </section>
